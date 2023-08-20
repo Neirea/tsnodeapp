@@ -14,7 +14,7 @@
         "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec npm run build",
         "copy-json": "node scripts/copy-json.js",
         "link-cli": "chmod +x ./dist/index.js && npm link",
-        "build": "tsc -p . && npm run copy-json",
+        "build": "esbuild src/index.ts --bundle --platform=node --format=cjs --outdir=dist && npm run copy-json",
         "example": "tsnodeapp example"
     },
     "repository": {
@@ -26,14 +26,13 @@
         "typescript"
     ],
     "license": "MIT",
-    "peerDependencies": {
-        "@types/node": "^20.5.1",
-        "typescript": "*"
-    },
     "dependencies": {
         "commander": "^11.0.0"
     },
     "devDependencies": {
+        "esbuild": "^0.19.2",
+        "typescript": "^5.1.6",
+        "@types/node": "^20.5.1",
         "nodemon": "^3.0.1"
     }
 }
