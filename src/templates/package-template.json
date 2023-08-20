@@ -1,0 +1,14 @@
+{
+    "name": "myapp",
+    "version": "0.0.0",
+    "scripts": {
+        "start": "node ./dist/index.js",
+        "dev": "tsc -w",
+        "build": "tsc -p ."
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^{{nodeTypesVersion}}",
+        "typescript": "^{{typescriptVersion}}"
+    }
+}

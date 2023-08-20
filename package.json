@@ -1,0 +1,38 @@
+{
+    "name": "tsnodeapp",
+    "author": {
+        "name": "Eugene Shumilin",
+        "email": "neirea@ukr.net",
+        "url": "https://neirea.com"
+    },
+    "bin": {
+        "tsnodeapp": "./dist/index.js"
+    },
+    "version": "0.0.0",
+    "description": "Quick way to start node.js typescript project",
+    "scripts": {
+        "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec npm run build",
+        "copy-json": "node scripts/copy-json.js",
+        "link-cli": "chmod +x ./dist/index.js && npm link",
+        "build": "tsc -p . && npm run copy-json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Neirea/tsnodeapp.git"
+    },
+    "keywords": [
+        "node.js",
+        "typescript"
+    ],
+    "license": "MIT",
+    "peerDependencies": {
+        "@types/node": "^20.5.1",
+        "typescript": "*"
+    },
+    "dependencies": {
+        "commander": "^11.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    }
+}
