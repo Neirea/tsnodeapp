@@ -9,12 +9,13 @@
         "tsnodeapp": "./dist/index.js"
     },
     "version": "0.0.0",
-    "description": "Quick way to start node.js typescript project",
+    "description": "Quick way to start bare bones node.js app with typescript",
     "scripts": {
         "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec npm run build",
         "copy-json": "node scripts/copy-json.js",
         "link-cli": "chmod +x ./dist/index.js && npm link",
-        "build": "tsc -p . && npm run copy-json"
+        "build": "tsc -p . && npm run copy-json",
+        "example": "tsnodeapp example"
     },
     "repository": {
         "type": "git",
