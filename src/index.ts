@@ -17,15 +17,14 @@ program
 program.parse(process.argv);
 
 async function createTsNodeApp(name: string) {
-    if (name && !isValidDirectoryName(name)) {
+    let targetDirectory = "";
+    if (!name || name === ".") {
+        targetDirectory = process.cwd();
+    } else if (!isValidDirectoryName(name)) {
         console.error(
             "Invalid directory name. Directory names can only contain letters, numbers, underscores, and hyphens."
         );
         return;
-    }
-    let targetDirectory = "";
-    if (!name || name === ".") {
-        targetDirectory = process.cwd();
     } else {
         targetDirectory = name;
     }
