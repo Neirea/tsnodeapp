@@ -1,13 +1,16 @@
 {
-    "include": ["src/**/*"],
     "compilerOptions": {
-        "target": "es2016",
-        "module": "commonjs",
+        "target": "ES2022",
+        "lib": ["ES2022"],
+        "module": "Preserve",
         "outDir": "./dist",
         "strict": true,
         "noUncheckedIndexedAccess": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "allowJs": true,
+        "moduleDetection": "force",
+        "resolveJsonModule": true,
+        "isolatedModules": true
     }
 }

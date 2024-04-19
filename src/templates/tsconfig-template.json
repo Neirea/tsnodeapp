@@ -2,15 +2,15 @@
     "compilerOptions": {
         "target": "ES2022",
         "lib": ["ES2022"],
-        "module": "ES2022",
+        "module": "Preserve",
         "outDir": "./dist",
         "strict": true,
         "noUncheckedIndexedAccess": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "allowJs": true,
-        "resolveJsonModule": true,
         "moduleDetection": "force",
+        "resolveJsonModule": true,
         "isolatedModules": true
     }
 }
